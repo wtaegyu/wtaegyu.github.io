@@ -20,12 +20,6 @@
 - 🐙 **GitHub**: [wtaegyu](https://github.com/wtaegyu)
 - 💼 **LinkedIn**: [wtaegyu](https://linkedin.com/in/wtaegyu)
 
-## 🚀 Quick Start
-
-1. Clone the repository
-2. Modify `config.js` with your information
-3. Deploy to GitHub Pages
-
 ## 📚 Documentation
 
 - [Reference](REFERENCE.md) - Configuration guide and project structure
