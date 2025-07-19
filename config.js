@@ -21,13 +21,10 @@ const userConfig = {
     
     // 관심 분야
     interests: [
-        "SLAM (Simultaneous Localization and Mapping)",
-        "자율주행 로봇",
-        "센서 융합",
-        "컴퓨터 비전",
-        "로보틱스",
-        "인공지능",
-        "실시간 시스템"
+        "SLAM",
+        "Mobile Robot",
+        "Pose Foundation",
+        "Reinforcement Learning"
     ],
     
     // 기술 스택
