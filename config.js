@@ -16,7 +16,7 @@ const userConfig = {
     introduction: {
         korean: "SLAM과 로보틱스 연구원입니다.",
         english: "SLAM & Robotics Researcher",
-        description: "I am a graduate student at Yonsei University, focusing on SLAM technology and autonomous robotics research."
+        description: "Graduate student at Yonsei University, focusing on SLAM technology and autonomous robotics research."
     },
     
     // 관심 분야
