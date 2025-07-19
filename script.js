@@ -1,3 +1,136 @@
+// 설정 정보를 웹페이지에 자동 반영
+function updatePageContent() {
+    if (typeof userConfig === 'undefined') {
+        console.log('Config not loaded yet');
+        return;
+    }
+
+    // 이름 업데이트
+    const nameElements = document.querySelectorAll('.hero-subtitle');
+    nameElements.forEach(element => {
+        element.textContent = `${userConfig.name}입니다`;
+    });
+
+    // 소개 업데이트
+    const introElements = document.querySelectorAll('.about-text p');
+    if (introElements.length > 0) {
+        introElements[0].textContent = userConfig.introduction.korean;
+        if (introElements.length > 1) {
+            introElements[1].textContent = userConfig.introduction.description;
+        }
+    }
+
+    // 기술 스택 업데이트
+    const skillTags = document.querySelector('.skill-tags');
+    if (skillTags) {
+        skillTags.innerHTML = '';
+        userConfig.skills.forEach(skill => {
+            const skillTag = document.createElement('span');
+            skillTag.className = 'skill-tag';
+            skillTag.textContent = skill;
+            skillTags.appendChild(skillTag);
+        });
+    }
+
+    // 프로젝트 업데이트
+    const projectCards = document.querySelectorAll('.project-card');
+    userConfig.projects.forEach((project, index) => {
+        if (projectCards[index]) {
+            const title = projectCards[index].querySelector('h3');
+            const description = projectCards[index].querySelector('p');
+            const icon = projectCards[index].querySelector('.project-placeholder');
+            
+            if (title) title.textContent = project.title;
+            if (description) description.textContent = project.description;
+            if (icon) icon.textContent = project.icon;
+        }
+    });
+
+    // 프로필 사진 업데이트
+    const profileImg = document.getElementById('profile-img');
+    if (profileImg && userConfig.profileImage) {
+        profileImg.src = `images/${userConfig.profileImage}`;
+        profileImg.alt = `${userConfig.name} 프로필 사진`;
+    }
+
+    // 연락처 업데이트
+    const emailLink = document.querySelector('a[href^="mailto:"]');
+    if (emailLink) {
+        emailLink.href = `mailto:${userConfig.email}`;
+    }
+
+    const githubLink = document.querySelector('a[href*="github.com"]');
+    if (githubLink) {
+        githubLink.href = userConfig.github;
+    }
+
+    const linkedinLink = document.querySelector('a[href*="linkedin.com"]');
+    if (linkedinLink) {
+        linkedinLink.href = userConfig.linkedin;
+    }
+
+    // 미디어 콘텐츠 업데이트
+    const mediaGrid = document.getElementById('media-grid');
+    if (mediaGrid && userConfig.media) {
+        mediaGrid.innerHTML = '';
+        userConfig.media.forEach(media => {
+            const mediaCard = document.createElement('div');
+            mediaCard.className = 'media-card';
+            
+            const typeBadge = media.type === 'youtube' ? 'YouTube' : 
+                             media.type === 'video' ? 'Video' : 'Image';
+            
+            mediaCard.innerHTML = `
+                <div class="media-thumbnail">
+                    <img src="${media.thumbnail}" alt="${media.title}" onerror="this.src='images/default-thumbnail.jpg'">
+                    ${media.type !== 'image' ? '<div class="play-button">▶</div>' : ''}
+                    <div class="media-duration">${media.duration}</div>
+                </div>
+                <div class="media-content-info">
+                    <span class="media-type-badge ${media.type}">${typeBadge}</span>
+                    <h3>${media.title}</h3>
+                    <p>${media.description}</p>
+                </div>
+            `;
+            
+            // 클릭 이벤트 추가
+            mediaCard.addEventListener('click', function() {
+                if (media.type === 'youtube') {
+                    window.open(media.url, '_blank');
+                } else if (media.type === 'video') {
+                    // 비디오 모달 또는 새 창에서 재생
+                    window.open(media.url, '_blank');
+                }
+            });
+            
+            mediaCard.style.cursor = 'pointer';
+            mediaGrid.appendChild(mediaCard);
+        });
+    }
+
+    // 푸터 업데이트
+    const footer = document.querySelector('.footer p');
+    if (footer) {
+        footer.innerHTML = `&copy; 2024 ${userConfig.name}. All rights reserved.`;
+    }
+}
+
+// 페이지 로드 시 설정 적용
+document.addEventListener('DOMContentLoaded', function() {
+    // 설정이 로드될 때까지 대기
+    if (typeof userConfig !== 'undefined') {
+        updatePageContent();
+    } else {
+        // config.js가 아직 로드되지 않은 경우 대기
+        const checkConfig = setInterval(() => {
+            if (typeof userConfig !== 'undefined') {
+                updatePageContent();
+                clearInterval(checkConfig);
+            }
+        }, 100);
+    }
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
