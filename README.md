@@ -71,4 +71,4 @@ git push -u origin main
 
 ---
 
-**참고**: GitHub Pages는 무료로 제공되며, 저장소가 public이어야 합니다. 
+**참고**: GitHub Pages는 무료로 제공되며, 저장소가 public이어야 합니다.
