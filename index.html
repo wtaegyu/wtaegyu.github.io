@@ -14,11 +14,11 @@
             <div class="nav-container">
                 <h1 class="logo">Portfolio</h1>
                 <ul class="nav-menu">
-                    <li><a href="#home">홈</a></li>
-                    <li><a href="#about">소개</a></li>
-                    <li><a href="#projects">프로젝트</a></li>
-                    <li><a href="#media">미디어</a></li>
-                    <li><a href="#contact">연락처</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -27,29 +27,59 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">우태규</h1>
-                <p class="hero-subtitle">SLAM & Robotics Researcher</p>
-                <p class="hero-description">연세대학교 전산학과 뉴로로보틱스 연구실에서 석사과정을 진행하며, SLAM 기술과 자율주행 로봇에 대한 연구를 하고 있습니다.</p>
-                <button class="cta-button">프로젝트 보기</button>
+                <div class="hero-text">
+                    <h1 class="hero-title">우태규</h1>
+                    <p class="hero-subtitle">SLAM & Robotics Researcher</p>
+                    <p class="hero-description">I am a graduate student at Yonsei University, focusing on SLAM technology and autonomous robotics research.</p>
+                    <div class="hero-buttons">
+                        <button class="cta-button primary">View Projects</button>
+                        <button class="cta-button secondary">Contact</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-placeholder">
+                        <div class="placeholder-icon">🤖</div>
+                        <div class="placeholder-text">SLAM & Robotics</div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="about" class="about">
             <div class="container">
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title">About</h2>
                 <div class="about-content">
-                    <div class="profile-image">
-                        <img src="images/profile.jpg" alt="우태규 프로필 사진" id="profile-img">
-                    </div>
                     <div class="about-text">
-                        <p>실시간 위치 추정과 환경 매핑을 통한 자율주행 시스템 개발에 주력하고 있습니다. 
-                           센서 융합 기술과 컴퓨터 비전을 활용하여 정밀한 로봇 제어 시스템을 연구하고 있습니다.</p>
+                        <div class="about-intro">
+                            <h3>Research Interests</h3>
+                            <div class="research-interests">
+                                <div class="interest-item">
+                                    <h4>Deep Learning</h4>
+                                    <p>Neural networks for computer vision and sensor fusion</p>
+                                </div>
+                                <div class="interest-item">
+                                    <h4>Reinforcement Learning</h4>
+                                    <p>Autonomous decision making and robot control</p>
+                                </div>
+                                <div class="interest-item">
+                                    <h4>Path Planning</h4>
+                                    <p>Optimal trajectory generation and navigation</p>
+                                </div>
+                                <div class="interest-item">
+                                    <h4>SLAM</h4>
+                                    <p>Simultaneous Localization and Mapping</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="skills">
-                            <h3>기술 스택</h3>
+                            <h3>Technical Skills</h3>
                             <div class="skill-tags">
                                 <!-- 기술 스택이 자동으로 로드됩니다 -->
                             </div>
                         </div>
+                    </div>
+                    <div class="profile-image">
+                        <img src="images/profile.jpg" alt="우태규 프로필 사진" id="profile-img">
                     </div>
                 </div>
             </div>
@@ -64,8 +94,8 @@
                             <div class="project-placeholder">🤖</div>
                         </div>
                         <div class="project-content">
-                            <h3>SLAM 기반 자율주행 로봇</h3>
-                            <p>ROS와 SLAM 알고리즘을 활용한 자율주행 로봇 개발 프로젝트입니다.</p>
+                            <h3>SLAM-based Autonomous Robot</h3>
+                            <p>Autonomous robot development project using ROS and SLAM algorithms.</p>
                             <div class="project-links">
                                 <a href="#" class="project-link">Live Demo</a>
                                 <a href="#" class="project-link">GitHub</a>
@@ -77,8 +107,8 @@
                             <div class="project-placeholder">🗺️</div>
                         </div>
                         <div class="project-content">
-                            <h3>실내 환경 매핑 시스템</h3>
-                            <p>LiDAR 센서를 활용한 실내 환경 매핑 및 경로 계획 시스템입니다.</p>
+                            <h3>Indoor Environment Mapping</h3>
+                            <p>Indoor environment mapping and path planning system using LiDAR sensors.</p>
                             <div class="project-links">
                                 <a href="#" class="project-link">Live Demo</a>
                                 <a href="#" class="project-link">GitHub</a>
@@ -90,8 +120,8 @@
                             <div class="project-placeholder">📊</div>
                         </div>
                         <div class="project-content">
-                            <h3>센서 융합 기반 위치 추정</h3>
-                            <p>IMU, GPS, 카메라 센서를 융합한 정밀 위치 추정 시스템입니다.</p>
+                            <h3>Sensor Fusion Localization</h3>
+                            <p>Precise localization system using IMU, GPS, and camera sensor fusion.</p>
                             <div class="project-links">
                                 <a href="#" class="project-link">Live Demo</a>
                                 <a href="#" class="project-link">GitHub</a>
@@ -106,7 +136,7 @@
             <div class="container">
                 <h2 class="section-title">Media</h2>
                 <div class="media-content">
-                    <p>연구 과정과 실험 결과를 영상으로 확인하실 수 있습니다.</p>
+                    <p>Robot demonstrations and research-related media content.</p>
                     <div class="media-grid" id="media-grid">
                         <!-- 미디어 콘텐츠가 자동으로 로드됩니다 -->
                     </div>
@@ -118,7 +148,7 @@
             <div class="container">
                 <h2 class="section-title">Contact</h2>
                 <div class="contact-content">
-                    <p>궁금한 점이 있으시면 언제든 연락주세요!</p>
+                    <p>Feel free to reach out if you have any questions!</p>
                     <div class="contact-links">
                         <a href="mailto:taegyu@yonsei.ac.kr" class="contact-link">
                             📧 Email

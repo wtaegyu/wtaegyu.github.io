@@ -16,7 +16,7 @@ const userConfig = {
     introduction: {
         korean: "SLAM과 로보틱스 연구원입니다.",
         english: "SLAM & Robotics Researcher",
-        description: "실시간 위치 추정과 환경 매핑을 통한 자율주행 시스템 개발에 주력하고 있습니다. 센서 융합 기술과 컴퓨터 비전을 활용하여 정밀한 로봇 제어 시스템을 연구하고 있습니다."
+        description: "I am a graduate student at Yonsei University, focusing on SLAM technology and autonomous robotics research."
     },
     
     // 관심 분야

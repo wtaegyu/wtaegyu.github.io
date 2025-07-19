@@ -125,12 +125,10 @@ function updatePageContent() {
     // 푸터 업데이트 (연도 자동 설정)
     const footer = document.querySelector('.footer p');
     if (footer) {
-        // config에서 수동 연도 설정이 있으면 사용, 없으면 현재 연도 사용
-        const year = userConfig.autoSettings && userConfig.autoSettings.year 
-            ? userConfig.autoSettings.year 
-            : new Date().getFullYear();
-        footer.innerHTML = `&copy; ${year} ${userConfig.name}. All rights reserved.`;
-        console.log('Footer updated with year:', year); // 디버깅용
+        // 현재 연도 강제 설정
+        const currentYear = new Date().getFullYear();
+        footer.innerHTML = `&copy; ${currentYear} ${userConfig.name}. All rights reserved.`;
+        console.log('Footer updated with year:', currentYear); // 디버깅용
     }
 }
 
@@ -164,10 +162,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// CTA button scroll to projects
-document.querySelector('.cta-button').addEventListener('click', function() {
+// CTA buttons functionality
+document.querySelector('.cta-button.primary').addEventListener('click', function() {
     const projectsSection = document.querySelector('#projects');
     projectsSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+});
+
+document.querySelector('.cta-button.secondary').addEventListener('click', function() {
+    const contactSection = document.querySelector('#contact');
+    contactSection.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     });
