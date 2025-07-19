@@ -130,6 +130,7 @@ function updatePageContent() {
             ? userConfig.autoSettings.year 
             : new Date().getFullYear();
         footer.innerHTML = `&copy; ${year} ${userConfig.name}. All rights reserved.`;
+        console.log('Footer updated with year:', year); // 디버깅용
     }
 }
 

@@ -14,9 +14,9 @@ const userConfig = {
     
     // 소개
     introduction: {
-        korean: "안녕하세요! 저는 SLAM과 로보틱스에 관심이 많은 연구원입니다.",
-        english: "Hello! I am a researcher interested in SLAM and robotics.",
-        description: "연세대학교 전산학과 뉴로로보틱스 연구실에서 석사과정을 진행하고 있으며, SLAM 기술과 자율주행 로봇에 대한 연구를 하고 있습니다. 실시간 위치 추정과 환경 매핑을 통한 자율주행 시스템 개발에 주력하고 있습니다."
+        korean: "SLAM과 로보틱스 연구원입니다.",
+        english: "SLAM & Robotics Researcher",
+        description: "실시간 위치 추정과 환경 매핑을 통한 자율주행 시스템 개발에 주력하고 있습니다. 센서 융합 기술과 컴퓨터 비전을 활용하여 정밀한 로봇 제어 시스템을 연구하고 있습니다."
     },
     
     // 관심 분야
