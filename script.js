@@ -20,6 +20,20 @@ function updatePageContent() {
         }
     }
 
+    // 관심 분야 추가 (새로운 섹션)
+    const aboutText = document.querySelector('.about-text');
+    if (aboutText && userConfig.interests) {
+        const interestsSection = document.createElement('div');
+        interestsSection.className = 'interests';
+        interestsSection.innerHTML = `
+            <h3>관심 분야</h3>
+            <div class="interest-tags">
+                ${userConfig.interests.map(interest => `<span class="interest-tag">${interest}</span>`).join('')}
+            </div>
+        `;
+        aboutText.appendChild(interestsSection);
+    }
+
     // 기술 스택 업데이트
     const skillTags = document.querySelector('.skill-tags');
     if (skillTags) {
@@ -108,10 +122,14 @@ function updatePageContent() {
         });
     }
 
-    // 푸터 업데이트
+    // 푸터 업데이트 (연도 자동 설정)
     const footer = document.querySelector('.footer p');
     if (footer) {
-        footer.innerHTML = `&copy; 2024 ${userConfig.name}. All rights reserved.`;
+        // config에서 수동 연도 설정이 있으면 사용, 없으면 현재 연도 사용
+        const year = userConfig.autoSettings && userConfig.autoSettings.year 
+            ? userConfig.autoSettings.year 
+            : new Date().getFullYear();
+        footer.innerHTML = `&copy; ${year} ${userConfig.name}. All rights reserved.`;
     }
 }
 
