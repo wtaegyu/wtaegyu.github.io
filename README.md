@@ -1,24 +1,35 @@
-# 우태규 포트폴리오
+# Tae-Gyu Woo Portfolio
 
-## 🌐 포트폴리오 홈페이지
+## 🌐 Portfolio Website
 
-**👉 [포트폴리오 바로가기](https://wtaegyu.github.io)**
+**👉 [View Portfolio](https://wtaegyu.github.io)**
 
 ---
 
-## 📋 간단 소개
+## 👨‍💻 About Me
 
-- **이름**: 우태규 (Tae-Gyu Woo)
-- **소속**: 연세대학교 전산학과 뉴로로보틱스 연구실
-- **분야**: SLAM, 로보틱스, 센서 융합
-- **이메일**: taegyu@yonsei.ac.kr
+- **Name**: Tae-Gyu Woo (우태규)
+- **Position**: Graduate Student
+- **Lab**: Neuro-Robotics Lab, Yonsei University
+- **Research**: SLAM, Robotics, Sensor Fusion
+- **Email**: taegyu@yonsei.ac.kr
 
-## 🔗 링크
+## 🔗 Contact
 
 - 📧 **Email**: taegyu@yonsei.ac.kr
 - 🐙 **GitHub**: [wtaegyu](https://github.com/wtaegyu)
 - 💼 **LinkedIn**: [wtaegyu](https://linkedin.com/in/wtaegyu)
 
+## 🚀 Quick Start
+
+1. Clone the repository
+2. Modify `config.js` with your information
+3. Deploy to GitHub Pages
+
+## 📚 Documentation
+
+- [Reference](REFERENCE.md) - Configuration guide and project structure
+
 ---
 
-*더 자세한 정보는 포트폴리오 홈페이지에서 확인하세요!*
+*For more details, visit the portfolio website!*
